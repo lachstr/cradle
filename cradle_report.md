@@ -3,13 +3,12 @@ header-includes:
    - \usepackage[margin=1in, headheight=0pt, headsep=0pt]{geometry}
 title: Animating Newton's Cradle
 author: Lachlan Macartney
-date: June 4, 2020
 ---
 
 
 # 1 Aim(Question posed and why its interesting)
 
-The purpose of this project is to animate Newton's Cradle from first princples. Newton's Cradle has been animated before however usually via a 'physics-free' key-frame method or one reliant on a complicated physics engine. It will demonstrate how strikingly real world behavior can be computed with simple, first-principles approach mathematical framework. It will also make apparent the issues which arise with numerical calculus techniques.
+The purpose of this project is to animate Newton's Cradle from first princples. Newton's Cradle has been animated before however often via a ''physics-free'' key-frame method or one reliant on a complicated physics engine. This project will demonstrate how strikingly real world behavior can be computed with simple, first-principles approach mathematical framework. Our elementary model will rightly predict how the system's behavior changes when multiple pendulums are raised. Additionally, it will provide insight on how a real cradle works and offer a possible explanation for some of the more curious behavior.
 
 # 2 Method(Basic approach)
 
@@ -35,7 +34,11 @@ $$\dot{\theta}_{i,\textrm{final}} = \frac{m_i-m_j}{m_i+m_j} \dot{\theta}_{i,\tex
 
 We may also add the condition that each pendulum mass has the same density $\rho$ such that $m_i$ and $r_i$ are related via $m_i=\frac{4\pi\rho}{3}r_i^3$. For the traditional Newton's Cradle with equal mass and radii pendlums the above collision formulae simplify. However, such a non traditional cradle will be explored.
 
-
 # 3 Results(Notable results - the best or final output of code)
+
+## 3.1 Traditional pendulum
+
+
+## 3.2 Non-equal masses
 
 # 4 Conclusions(Answer to your question/Summary)
