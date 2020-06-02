@@ -16,7 +16,7 @@ The purpose of this project is to animate Newton's Cradle from first principles.
 ``Newton's Cradle can be modelled as multiple pendulums confined to swing along a single axis which undergo elastic collisions with one another. The pendulums rest such that there is a small amount of horizontal displacement between them.''
 
 ## 2.1 Fundamental Framework
-This framework was implemented in python and the following graphics generated with the matplotlib python package. 
+This framework was implemented in python, and the following graphics generated with the matplotlib python package. 
 
 We will define the mathematics required for a generalised set of $n$ independent pendulums, then compute their interactions in a cartesian coordinate system $(x,y)$ which we will call the Cradle's Frame. For each $i \in \{1, 2, 3, ... , n\}$ let the $i$th pendulum have length $\ell$, radius $r_i$ and mass $m_i$. It will also need some displacement $\Delta x_i$ along the $x$-axis, so that it 'almost touches' the others at rest. Each pendulum has a single degree of freedom along the axis $(\theta_i)$ in its own reference frame which obeys the differential equation of a pendulum;
 
@@ -61,13 +61,15 @@ Define the $\theta = 0$ position for a pendulum to have zero gravitational poten
 ![A novel varied mass cradle](vlcsnap-novel.png){ width=50% }
 
 While the prior simulations could have been computed with a simplified elastic collision formula, \href{https://lachstr.github.io/physics_animations/misc/2020/05/29/newtons-cradle-animation.html#non-equal_masses}{these}
- could not have. It is interesting to note how the non-equal mass systems more quickly exhibit chaotic behavior. 
+ could not have. It is interesting to note how the non-equal mass systems quickly exhibit chaotic behavior. 
 
 ## 3.3 Computational Issues
 
-Due to the discrete nature of the time steps used, collisions are not detected until the masses are slightly inside one another. This is problematic and sometimes leads to the masses getting stuck inside one another. To mitigate this problem, I have triggered an error to be raised if a collision is detected too late. I then added some error handling to attempt the simulation again with smaller time steps. The time steps required seem to be largely dependent on the system's complexity. It is favourable to choose a larger time step as this reduces the computation time. This error handling has largely fixed the issue but results in long computation times for more complicated systems. It is a work-around rather than an ideal solution. If I were to do this again I would want to reduce the collision detection algorithim's complexiity.
+Due to the discrete nature of the time steps used, collisions are not detected until the masses are slightly inside one another. This is problematic and sometimes leads to the masses getting stuck inside one another. To mitigate this problem, I have triggered an error to be raised if a collision is detected too late. I then added some error handling to attempt the simulation again with smaller time steps. The time steps required seem to be largely dependent on the system's complexity. It is favourable to choose a larger time step as this reduces the computation time. This error handling has largely fixed the issue but results in long computation times for more complicated systems. It is a work-around rather than an ideal solution. If I were to do this again I would want to reduce the collision detection algorithm's complexity.
 
 # 4 Conclusions
 
 We replicated the results of a real pendulum showing the expected behavior with one, two and three pendulums raised in a five pendulum system. The most interesting result of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through simulation, we confirmed the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently, we can infer that this is likely a contributing factor of middle pendulum motion in a real Newton’s Cradle.
+
+
 
