@@ -46,7 +46,7 @@ The simulations for five pendulums reflect the same results seen with a real New
 ## 3.2 Middle pendulum motion
 One of the most striking results of this simulation is we have recreated the effect where the middle balls begin to move after some time. The same phenomena can be seen in the video of a real cradle at the link above.
 
-![A 3-pendulum cradle](vlcsnap-2020-06-01-14h06m51s924-crop.png){ width=50% }
+![A 3-pendulum cradle](vlcsnap-3-pends.png){ width=50% }
 
 The explanation I can come up with for this originates from what we meant by the separation between pendulums being small.
 
@@ -69,5 +69,5 @@ Due to the discrete nature of the time steps used, collisions will not be detect
 
 # 4 Conclusions(Answer to your question/Summary)
 
-We recreated the results of a real pendulum showing the expected behavior when one, two and three pendulums are raised in a five pendulum system. The most interesting results of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through the simulations we were able to test the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently we can infer this at least part of the reason we see middle pendulum motion increase as a real Newton’s Cradle.
+We recreated the results of a real pendulum showing the expected behavior when one, two and three pendulums are raised in a five pendulum system. The most interesting results of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through the simulations we were able to test the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently we can infer this at least part of the reason we see middle pendulum motion increase in a real Newton’s Cradle.
 
