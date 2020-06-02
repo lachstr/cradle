@@ -7,11 +7,11 @@ title: Animating Newton's Cradle
 author: Lachlan Macartney
 ---
 
-# 1 Aim(Question posed and why its interesting)
+# 1 Aim
 
 The purpose of this project is to animate Newton's Cradle from first principles. Newton's Cradle has been animated before however typically via a key-frame method or one reliant on a complicated physics engine. This project will demonstrate how strikingly real world behavior can be computed with a simple, first-principles approach mathematical framework. Our elementary model will predict how the system's behavior changes when varying numbers of pendulums are raised. Additionally, it will provide insight on how a real cradle works and offer an explanation for some of the more curious non-ideal behavior.
 
-# 2 Method(Basic approach)
+# 2 Method
 
 ``Newton's Cradle can be modelled as multiple pendulums confined to swing along a single axis which undergo elastic collisions with one another. The pendulums rest such that there is a small amount of horizontal displacement between them.''
 
@@ -36,7 +36,7 @@ $$\dot{\theta}_{i,\textrm{final}} = \frac{m_i-m_j}{m_i+m_j} \dot{\theta}_{i,\tex
 
 We may also add the condition that each pendulum mass has the same density $\rho$ such that $m_i$ and $r_i$ are related via $m_i=\frac{4\pi\rho}{3}r_i^3$. For the traditional Newton's Cradle with equal mass and radii pendulums the above collision formulae simplify. However, such a non traditional cradle will be explored.
 
-# 3 Results(Notable results - the best or final output of code)
+# 3 Results
 
 \href{https://lachstr.github.io/physics_animations/misc/2020/05/29/newtons-cradle-animation.html}{\textcolor{blue}{Click here to view the results discussed. (Same title names)}}
 
@@ -67,7 +67,7 @@ While the prior simulations could have been computed with a simplified elastic c
 
 Due to the discrete nature of the time steps used, collisions will not be detected until the masses are slightly inside one another. This is problematic and sometimes leads to the masses getting stuck inside one another. To mitigate this problem, I have triggered an error to be raised if the collision is detected late. I then added some error handling to attempt the simulation again with smaller time steps. The time steps required seem to be largely dependent on the system's complexity. It is favourable to choose a larger time step as this reduces the computation time. This error handling has largely fixed the issue but results in long computation times for more complicated systems. It is a work-around rather than an ideal solution. If I were to do this again I would want to think of a better way to detect collisions.
 
-# 4 Conclusions(Answer to your question/Summary)
+# 4 Conclusions
 
 We recreated the results of a real pendulum showing the expected behavior when one, two and three pendulums are raised in a five pendulum system. The most interesting results of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through the simulations we were able to test the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently we can infer this at least part of the reason we see middle pendulum motion increase in a real Newton’s Cradle.
 
