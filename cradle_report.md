@@ -40,22 +40,22 @@ We may also add the condition that each pendulum mass has the same density $\rho
 
 \href{https://lachstr.github.io/physics_animations/misc/2020/05/29/newtons-cradle-animation.html}{\textcolor{blue}{Click here to view the results discussed. (Same title names)}}
 
-## 3.1 Traditional cradle
+## 3.1 Traditional Cradle
 The simulations for five pendulums reflect the same results seen with a real Newton’s Cradle.
 
-## 3.2 Middle pendulum motion
-One of the most striking results of this simulation is we have recreated the effect where the middle balls begin to move after some time. The same phenomena can be seen in the video of a real cradle at the link above.
+## 3.2 Middle Pendulum Motion
+Watching these animations closely, we notice that the once stationary middle masses begin to move after some time. The same phenomena can be seen in the video of a real cradle at the link above. This is a remarkable result.
 
 ![A 3-pendulum cradle](vlcsnap-3-pends.png){ width=50% }
 
-The explanation I can come up with for this originates from what we meant by the separation between pendulums being small.
+The explanation for this originates from what is meant by the separation between pendulums being small.
 
 Our simulation will aid us in arriving at an explanation. We can place the pendulums closer together, observe how this increases the time before the motion of the middle masses becomes obvious.
 
 Define the $\theta = 0$ position for a pendulum to have zero gravitational potential energy. If one or more pendulums collide with a positive gravitational potential energy, then the middle pendulums begin to move. This is because the pendulum with the initial velocity transfers all of its momentum into the once stationary pendulum, however since it has gravitational potential energy it will be subsequently accelerated by gravity. It is then obvious why a real pendulum inevitably reaches this state; at rest the pendulums can either be touching, in which case they collide with a positive potential energy or not-touching, in which case a collision will not occur until the mass in motion has a positive potential energy.
 
 
-## 3.3 Non-equal masses
+## 3.3 Non-equal Masses
 
 
 ![A novel varied mass cradle](vlcsnap-novel.png){ width=50% }
@@ -63,11 +63,11 @@ Define the $\theta = 0$ position for a pendulum to have zero gravitational poten
 While the prior simulations could have been computed with a simplified elastic collision formula, \href{https://lachstr.github.io/physics_animations/misc/2020/05/29/newtons-cradle-animation.html#non-equal_masses}{these}
  could not have. It is interesting to note how the non-equal mass systems more quickly exhibit chaotic behavior. 
 
-## 3.3 Computational issues
+## 3.3 Computational Issues
 
-Due to the discrete nature of the time steps used, collisions will not be detected until the masses are slightly inside one another. This is problematic and sometimes leads to the masses getting stuck inside one another. To mitigate this problem, I have triggered an error to be raised if the collision is detected late. I then added some error handling to attempt the simulation again with smaller time steps. The time steps required seem to be largely dependent on the system's complexity. It is favourable to choose a larger time step as this reduces the computation time. This error handling has largely fixed the issue but results in long computation times for more complicated systems. It is a work-around rather than an ideal solution. If I were to do this again I would want to think of a better way to detect collisions.
+Due to the discrete nature of the time steps used, collisions are not detected until the masses are slightly inside one another. This is problematic and sometimes leads to the masses getting stuck inside one another. To mitigate this problem, I have triggered an error to be raised if a collision is detected too late. I then added some error handling to attempt the simulation again with smaller time steps. The time steps required seem to be largely dependent on the system's complexity. It is favourable to choose a larger time step as this reduces the computation time. This error handling has largely fixed the issue but results in long computation times for more complicated systems. It is a work-around rather than an ideal solution. If I were to do this again I would want to reduce the collision detection algorithim's complexiity.
 
 # 4 Conclusions
 
-We recreated the results of a real pendulum showing the expected behavior when one, two and three pendulums are raised in a five pendulum system. The most interesting results of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through the simulations we were able to test the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently we can infer this at least part of the reason we see middle pendulum motion increase in a real Newton’s Cradle.
+We replicated the results of a real pendulum showing the expected behavior with one, two and three pendulums raised in a five pendulum system. The most interesting result of this project is we were able to explain the origins of middle pendulum motion in Newton’s Cradle. Through simulation, we confirmed the hypothesis that it depended on their stationary separation and subsequently deduced a physical argument that supports this hypothesis. Consequently, we can infer that this is likely a contributing factor of middle pendulum motion in a real Newton’s Cradle.
 
