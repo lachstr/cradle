@@ -40,7 +40,7 @@ We may also add the condition that each pendulum mass has the same density $\rho
 
 \href{https://lachstr.github.io/physics_animations/misc/2020/05/29/newtons-cradle-animation.html}{\textcolor{blue}{Click here to view the results discussed. (Same title names)}}
 
-## 3.1 Traditional pendulum
+## 3.1 Traditional cradle
 The simulations for five pendulums reflect the same results seen with a real Newton’s Cradle.
 
 ## 3.2 Middle pendulum motion
