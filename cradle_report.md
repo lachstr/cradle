@@ -13,7 +13,7 @@ The purpose of this project is to animate Newton's Cradle from first principles.
 
 # 2 Method
 
-``Newton's Cradle can be modelled as multiple pendulums confined to swing along a single axis which undergo elastic collisions with one another. The pendulums rest such that there is a small amount of horizontal displacement between them.''
+``Newton's Cradle can be modelled as multiple pendulums confined to swing along a single axis which undergo elastic collisions with one another. The pendulums rest such that there is a small amount of horizontal displacement between their masses.''
 
 ## 2.1 Fundamental Framework
 This framework was implemented in python, and the following graphics generated with the matplotlib python package. 
@@ -52,11 +52,13 @@ The explanation for this originates from what is meant by the separation between
 
 Our simulation will aid us in arriving at an explanation. We can place the pendulums closer together, observe how this increases the time before the motion of the middle masses becomes obvious.
 
-Define the $\theta = 0$ position for a pendulum to have zero gravitational potential energy. If one or more pendulums collide with a positive gravitational potential energy, then the middle pendulums begin to move. This is because the pendulum with the initial velocity transfers all of its momentum into the once stationary pendulum, however since it has gravitational potential energy it will be subsequently accelerated by gravity. It is then obvious why a real pendulum inevitably reaches this state; at rest the pendulums can either be touching, in which case they collide with a positive potential energy or not-touching, in which case a collision will not occur until the mass in motion has a positive potential energy.
+Define the $\theta=0$ position for a pendulum to have zero gravitational potential energy (GPE). Consider the 3-pendulum system where the masses have a non-zero seperation between them.
 
+The right pendulum is released from a height, it swings just past its zero GPE point before transfering all of its momentum to the middle pendulum. The middle pendulum then swings past its zero GPE point before transfering all of its momentum to the left pendulum - the middle pendulum has 'stolen' some of the system's energy. The left pendulum swings up and down again, meanwhile the middle pendulum has also been accellerating due to its positive GPE (however just a tiny bit.) So long as the middle pendulum is not touching the right pendulum when the left pendulum hits it (which it is statsitically unlikely to be) then the middle pendlum will again 'steal' some of the system's energy. Thus with each subsequent collision the middle pendulum will almost certainly 'steal' some energy from the external pendulums. This thinking can be extended to a larger system with middle pendulum\emph{s}.
+
+This is my attempt at an explanation yet I don't find it completely satisfying. It is interesting how this seemingly simple system suddenly becomes complex when we look at it in detail. One of the great things about computational physics is we don't need to care, it is simply what our model predicts - an explanation for humans is nice but of secondary importance.   
 
 ## 3.3 Non-equal Masses
-
 
 ![A novel varied mass cradle](vlcsnap-novel.png){ width=50% }
 
